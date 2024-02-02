@@ -16,6 +16,8 @@ public class DeleteTrash : MonoBehaviour
     [SerializeField] private TextMeshProUGUI trash3Text;
 
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    [SerializeField] private GameObject canvas;
     private int currentPoints;
 
     private void Start()
@@ -68,6 +70,6 @@ public class DeleteTrash : MonoBehaviour
     public void RemoveTrash3()
     {
         RemoveTrash(trash3Image, trash3Button, trash3Text, 30, "Trash3Destroyed");
-
+        canvas.SetActive(true);
     }
 }
