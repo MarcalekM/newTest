@@ -19,11 +19,11 @@ public class TimedSpawn : MonoBehaviour
         var selectedSpawnee = spawnee[index];
 
         GameObject spawnedObject = Instantiate(selectedSpawnee, transform.position, transform.rotation);
-        Move moveScript = spawnedObject.GetComponent<Move>();  // Hozzáférés a Move scripthez
+        Move moveScript = spawnedObject.GetComponent<Move>();
 
         if (moveScript != null)
         {
-            moveScript.enabled = true;  // Engedélyezzük a mozgatást
+            moveScript.enabled = true;
         }
     }
 }
